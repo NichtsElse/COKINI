@@ -1,60 +1,142 @@
 # COKINI - Platform Pemberdayaan UMKM & Donasi
 
-COKINI adalah aplikasi berbasis web yang dirancang untuk membantu pelaku UMKM dalam memasarkan produk mereka sekaligus mengintegrasikan sistem donasi. Platform ini memungkinkan pengguna untuk melihat katalog produk, melakukan transaksi, dan berkontribusi dalam program donasi yang tersedia.
+COKINI adalah aplikasi berbasis web yang dirancang untuk membantu pelaku UMKM dalam memasarkan produk mereka sekaligus mengintegrasikan sistem donasi. Platform ini memungkinkan pengguna untuk melihat katalog produk, melakukan transaksi, serta berkontribusi dalam program donasi yang tersedia.
+
+---
 
 ## ✨ Fitur Utama
 
-- **Sistem Autentikasi**: Login dan Register terpisah untuk pengguna umum dan pelaku UMKM.
-- **Katalog Produk**: Daftar produk UMKM dengan detail spesifikasi dan harga.
-- **Manajemen Transaksi**: Proses pembelian produk dari UMKM.
-- **Sistem Donasi**: Fitur khusus untuk melihat detail donasi dan melakukan konfirmasi pembayaran donasi.
-- **Panel Admin**: Manajemen data produk, transaksi, dan pengguna melalui direktori `/admin`.
-- **Integrasi Database**: Menggunakan MySQL untuk penyimpanan data yang persisten.
+* 🔐 **Sistem Autentikasi**
+  Login dan registrasi terpisah untuk pengguna umum dan pelaku UMKM.
+
+* 🛍️ **Katalog Produk**
+  Menampilkan daftar produk UMKM lengkap dengan detail dan harga.
+
+* 💳 **Manajemen Transaksi**
+  Mendukung proses pembelian produk oleh pengguna.
+
+* ❤️ **Sistem Donasi**
+  Pengguna dapat melihat program donasi dan melakukan konfirmasi pembayaran.
+
+* 🛠️ **Panel Admin**
+  Manajemen data produk, transaksi, dan pengguna melalui direktori `/admin`.
+
+* 🗄️ **Integrasi Database**
+  Menggunakan MySQL untuk penyimpanan data secara persisten.
+
+---
 
 ## 🛠️ Teknologi yang Digunakan
 
-- **Frontend**: HTML5, CSS3 (Custom styles dalam direktori `/css`).
-- **Backend**: PHP (Native).
-- **Database**: MySQL.
-- **Library/Tools**: Font-awesome (dalam `/src`), integrasi gambar produk dalam `/produk`.
+| Layer    | Teknologi    |
+| -------- | ------------ |
+| Frontend | HTML5, CSS3  |
+| Backend  | PHP (Native) |
+| Database | MySQL        |
+| Tools    | Font Awesome |
 
-## 📂 Struktur Folder Utama
+---
 
-- `/admin`: Berisi file manajemen untuk admin sistem.
-- `/css`: Berkas stylesheet untuk tampilan antarmuka.
-- `/images`: Aset gambar statis aplikasi.
-- `/produk`: Penyimpanan gambar produk yang diunggah.
-- `/src`: Berkas sumber tambahan (seperti font atau library eksternal).
-- `dbconnect.php`: Konfigurasi koneksi ke database.
-- `function.php`: Kumpulan fungsi modular yang digunakan di seluruh aplikasi.
-- `*.sql`: File dump database untuk inisialisasi sistem.
+## 📂 Struktur Folder
+
+```
+COKINI/
+│── admin/          # Panel admin
+│── css/            # Stylesheet
+│── images/         # Aset gambar statis
+│── produk/         # Gambar produk upload
+│── src/            # Library & resource tambahan
+│── dbconnect.php   # Koneksi database
+│── function.php    # Fungsi helper
+│── *.sql           # File database
+```
+
+---
 
 ## 🚀 Cara Instalasi
 
-1. **Clone Repositori**
-   ```bash
-   git clone [https://github.com/NichtsElse/COKINI.git](https://github.com/NichtsElse/COKINI.git)
+### 1. Clone Repository
 
-2. **Persiapkan Server Lokal**
+```bash
+git clone https://github.com/NichtsElse/COKINI.git
+cd COKINI
+```
 
-Pastikan Anda menggunakan XAMPP, WAMP, atau Laragon dengan versi PHP yang mendukung (disarankan PHP 7.4 atau terbaru).
+### 2. Persiapkan Server Lokal
 
-Pindahkan folder proyek ke direktori htdocs atau www.
+Gunakan salah satu:
 
-3. **Impor Database**
+* XAMPP
+* WAMP
+* Laragon
 
-Buka phpMyAdmin.
+Disarankan menggunakan **PHP 7.4 atau lebih baru**.
 
-Buat database baru (misal: db_cokini).
+Pindahkan folder project ke:
 
-Impor file cokini (2).sql atau cokini5 (2).sql yang tersedia di root folder.
+* `htdocs` (XAMPP)
+* `www` (WAMP/Laragon)
 
-4. **Konfigurasi Database**
+---
 
-Buka file dbconnect.php.
+### 3. Setup Database
 
-Sesuaikan hostname, username, password, dan database_name dengan pengaturan server lokal Anda.
+1. Buka **phpMyAdmin**
+2. Buat database baru, contoh:
 
-5. **Jalankan Aplikasi**
+   ```
+   db_cokini
+   ```
+3. Import salah satu file SQL:
 
-Akses melalui browser di: http://localhost/COKINI/index.php
+   * `cokini (2).sql`
+   * atau `cokini5 (2).sql`
+
+---
+
+### 4. Konfigurasi Database
+
+Buka file:
+
+```
+dbconnect.php
+```
+
+Sesuaikan konfigurasi:
+
+```php
+$servername = "localhost";
+$username   = "root";
+$password   = "";
+$dbname     = "db_cokini";
+```
+
+---
+
+### 5. Jalankan Aplikasi
+
+Buka browser dan akses:
+
+```
+http://localhost/COKINI/index.php
+```
+
+## 🤝 Kontribusi
+
+Kontribusi sangat terbuka!
+Silakan fork repository ini dan ajukan pull request.
+
+---
+
+## 📄 Lisensi
+
+Project ini menggunakan lisensi **MIT**.
+
+---
+
+## 👨‍💻 Author
+
+Dikembangkan oleh:
+**NichtsElse**
+
+GitHub: https://github.com/NichtsElse
